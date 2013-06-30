@@ -11,7 +11,7 @@ Vcs-Browser: https://github.com/cmangos/mangos-classic
 Package: mangos-classic
 Architecture: amd64 i386
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: CMaNGOS classic
+Description: CMaNGOS Classic
  C(ontinued)-MaNGOS is a free project with the following
  goal: Doing WoW-Emulation Right!
  .
