@@ -1,11 +1,13 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
 
+PACKAGE = $(shell dh_listpackages)
+
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
 	[ -d build ] || mkdir build
-	cd build; cmake .. -DCMAKE_INSTALL_PREFIX=/opt/mangos-tbc \
+	cd build; cmake .. -DCMAKE_INSTALL_PREFIX=/opt/$(PACKAGE) \
 	-DDEBUG=0 -DPCH=1 -DACE_USE_EXTERNAL=1 -DTBB_USE_EXTERNAL=1
 	touch configure-stamp
 
@@ -27,7 +29,7 @@ install: build
 	dh_testdir
 	dh_prep  
 	dh_installdirs
-	cd build; ${MAKE} install DESTDIR=$(CURDIR)/debian/mangos-tbc
+	cd build; ${MAKE} install DESTDIR=$(CURDIR)/debian/$(PACKAGE)
 
 binary-indep: install
 	dh_testdir
