@@ -12,11 +12,15 @@ configure-stamp:
 	touch configure-stamp
 
 
-build: build-stamp
+build: build-indep build-arch
+
+build-indep:
+
+build-arch: build-stamp
 
 build-stamp: configure-stamp  
 	dh_testdir
-	cd build; ${MAKE}
+	cd build; $(MAKE)
 	touch build-stamp
 
 clean: 
@@ -29,9 +33,11 @@ install: build
 	dh_testdir
 	dh_prep  
 	dh_installdirs
-	cd build; ${MAKE} install DESTDIR=$(CURDIR)/debian/$(PACKAGE)
+	cd build; $(MAKE) install DESTDIR=$(CURDIR)/debian/$(PACKAGE)
 
-binary-indep: install
+binary-indep:
+
+binary-arch: install
 	dh_testdir
 	dh_installchangelogs 
 	dh_installdocs
@@ -49,8 +55,6 @@ binary-indep: install
 	dh_gencontrol
 	dh_md5sums
 	dh_builddeb
-
-binary-arch: install
 
 binary: binary-indep binary-arch
 .PHONY: build clean binary-indep binary-arch binary install configure
