@@ -1,0 +1,5 @@
+mangos-classic (0.12.2+r@@REVISION@@~@@CODENAME@@1) unstable; urgency=low
+
+  * Release @@REVISION@@
+
+ -- Dimitri Savineau <savineau.dimitri@gmail.com>  Sat, 29 Jun 2013 21:04:15 -0400

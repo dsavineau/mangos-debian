@@ -1,0 +1,54 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+configure: configure-stamp
+configure-stamp:
+	dh_testdir
+	[ -d build ] || mkdir build
+	cd build; cmake .. -DCMAKE_INSTALL_PREFIX=/opt/mangos-classic \
+	-DDEBUG=0 -DPCH=1 -DACE_USE_EXTERNAL=1 -DTBB_USE_EXTERNAL=1
+	touch configure-stamp
+
+
+build: build-stamp
+
+build-stamp: configure-stamp  
+	dh_testdir
+	cd build; ${MAKE} -j4
+	touch build-stamp
+
+clean: 
+	dh_testdir
+	[ ! -d build ] || rm -rf build
+	rm -f build-stamp configure-stamp
+	dh_clean 
+
+install: build
+	dh_testdir
+	dh_prep  
+	dh_installdirs
+	cd build; ${MAKE} install DESTDIR=$(CURDIR)/debian/mangos-classic
+
+binary-indep: install
+	dh_testdir
+	dh_installchangelogs 
+	dh_installdocs
+	dh_installexamples
+	dh_installdirs
+	dh_install
+	dh_installman
+	dh_link
+	dh_strip
+	dh_compress
+	dh_fixperms
+	dh_makeshlibs
+	dh_installdeb
+	dh_shlibdeps
+	dh_gencontrol
+	dh_md5sums
+	dh_builddeb
+
+binary-arch: install
+
+binary: binary-indep binary-arch
+.PHONY: build clean binary-indep binary-arch binary install configure
