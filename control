@@ -1,17 +1,17 @@
-Source: mangos-classic
+Source: mangos-wotlk
 Section: games
 Priority: optional
 Maintainer: Dimitri Savineau <savineau.dimitri@gmail.com>
 Build-Depends: debhelper(>= 7.0), git, cmake(>= 2.8), libtbb-dev, libmysqlclient-dev, zlib1g-dev, libssl-dev, libace-dev 
 Standards-Version: 3.8.0
 Homepage: http://cmangos.net/
-Vcs-Git: git://github.com/cmangos/mangos-classic
-Vcs-Browser: https://github.com/cmangos/mangos-classic
+Vcs-Git: git://github.com/cmangos/mangos-wotlk
+Vcs-Browser: https://github.com/cmangos/mangos-wotlk
 
-Package: mangos-classic
+Package: mangos-wotlk
 Architecture: amd64 i386
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: CMaNGOS Classic
+Description: CMaNGOS Wrath of the Lich King
  C(ontinued)-MaNGOS is a free project with the following
  goal: Doing WoW-Emulation Right!
  .
