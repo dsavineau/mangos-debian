@@ -2,8 +2,8 @@ Source: mangos-cata
 Section: games
 Priority: optional
 Maintainer: Dimitri Savineau <savineau.dimitri@gmail.com>
-Build-Depends: debhelper(>= 7.0), git, cmake(>= 2.8), libtbb-dev, libmysqlclient-dev, zlib1g-dev, libssl-dev, libace-dev, libbz2-dev 
-Standards-Version: 3.8.0
+Build-Depends: debhelper(>= 8), git, cmake(>= 2.8), libtbb-dev, libmysqlclient-dev, zlib1g-dev, libssl-dev, libace-dev, libbz2-dev 
+Standards-Version: 3.9.1
 Homepage: http://cmangos.net/
 Vcs-Git: git://github.com/cmangos/mangos-cata
 Vcs-Browser: https://github.com/cmangos/mangos-cata
