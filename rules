@@ -14,7 +14,7 @@ build: build-stamp
 
 build-stamp: configure-stamp  
 	dh_testdir
-	cd build; ${MAKE} -j4
+	cd build; ${MAKE}
 	touch build-stamp
 
 clean: 
