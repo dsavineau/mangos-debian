@@ -1,17 +1,17 @@
-Source: mangos-wotlk
+Source: mangos-cata
 Section: games
 Priority: optional
 Maintainer: Dimitri Savineau <savineau.dimitri@gmail.com>
 Build-Depends: debhelper(>= 7.0), git, cmake(>= 2.8), libtbb-dev, libmysqlclient-dev, zlib1g-dev, libssl-dev, libace-dev 
 Standards-Version: 3.8.0
 Homepage: http://cmangos.net/
-Vcs-Git: git://github.com/cmangos/mangos-wotlk
-Vcs-Browser: https://github.com/cmangos/mangos-wotlk
+Vcs-Git: git://github.com/cmangos/mangos-cata
+Vcs-Browser: https://github.com/cmangos/mangos-cata
 
-Package: mangos-wotlk
+Package: mangos-cata
 Architecture: amd64 i386
 Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: CMaNGOS Wrath of the Lich King
+Description: CMaNGOS Cataclysm
  C(ontinued)-MaNGOS is a free project with the following
  goal: Doing WoW-Emulation Right!
  .
