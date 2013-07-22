@@ -17,3 +17,14 @@ Description: CMaNGOS The Burning Crusade
  .
  This project is about developing a server software that
  is able to emulate a well known MMORPG service.
+
+Package: mangos-tbc-dbg
+Architecture: amd64 i386
+Section: debug
+Depends: mangos-classic (= ${binary:Version}), ${misc:Depends}
+Description: Debugging symbols for CMaNGOS The Burning Crusade
+ C(ontinued)-MaNGOS is a free project with the following
+ goal: Doing WoW-Emulation Right!
+ .
+ This project is about developing a server software that
+ is able to emulate a well known MMORPG service.
