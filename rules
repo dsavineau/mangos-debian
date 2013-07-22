@@ -1,14 +1,14 @@
 #!/usr/bin/make -f
 # -*- makefile -*-
 
-PACKAGE = $(shell dh_listpackages)
+PACKAGE="mangos-wotlk" 
 
 configure: configure-stamp
 configure-stamp:
 	dh_testdir
 	[ -d build ] || mkdir build
 	cd build; cmake .. -DCMAKE_INSTALL_PREFIX=/opt/$(PACKAGE) \
-	-DDEBUG=0 -DPCH=1 -DACE_USE_EXTERNAL=1 -DTBB_USE_EXTERNAL=1
+	-DDEBUG=1 -DPCH=1 -DACE_USE_EXTERNAL=1 -DTBB_USE_EXTERNAL=1
 	touch configure-stamp
 
 
@@ -46,7 +46,7 @@ binary-arch: install
 	dh_install
 	dh_installman
 	dh_link
-	dh_strip
+	dh_strip --dbg-package=mangos-wotlk-dbg
 	dh_compress
 	dh_fixperms
 	dh_makeshlibs
