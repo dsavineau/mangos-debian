@@ -21,7 +21,7 @@ Description: CMaNGOS The Burning Crusade
 Package: mangos-tbc-dbg
 Architecture: amd64 i386
 Section: debug
-Depends: mangos-classic (= ${binary:Version}), ${misc:Depends}
+Depends: mangos-tbc (= ${binary:Version}), ${misc:Depends}
 Description: Debugging symbols for CMaNGOS The Burning Crusade
  C(ontinued)-MaNGOS is a free project with the following
  goal: Doing WoW-Emulation Right!
