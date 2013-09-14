@@ -8,7 +8,8 @@ configure-stamp:
 	dh_testdir
 	[ -d build ] || mkdir build
 	cd build; cmake .. -DCMAKE_INSTALL_PREFIX=/opt/$(PACKAGE) \
-	-DDEBUG=1 -DPCH=1 -DACE_USE_EXTERNAL=1 -DTBB_USE_EXTERNAL=1
+	-DDEBUG=1 -DPCH=1 -DACE_USE_EXTERNAL=1 -DTBB_USE_EXTERNAL=1 \
+	-DINCLUDE_BINDINGS_DIR=ScriptDev2
 	touch configure-stamp
 
 
