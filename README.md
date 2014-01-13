@@ -34,11 +34,12 @@ These scripts use TBB (libtbb-dev) and ACE (libace-dev) from Debian/Ubuntu packa
 mangos-debian has been tested on GNU/Linux Debian/Ubuntu distributions :
 
 * Debian Squeeze (6.0.x)
-* Debian Wheezy (7.x)
-* Debian Jessie (testing)
+* Debian Wheezy  (7.x)
+* Debian Jessie  (8.x)
 * Ubuntu Precise (12.04)
 * Ubuntu Quantal (12.10)
-* Ubuntu Raring (13.04)
+* Ubuntu Raring  (13.04)
+* Ubuntu Saucy   (13.10)
 
 ## Repository
 
