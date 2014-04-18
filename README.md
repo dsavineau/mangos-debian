@@ -6,7 +6,7 @@ mangos-debian contains all debian files to create MaNGOS package on GNU/Linux De
 
 There is one git branch for each MaNGOS version (classic, tbc, wotlk and cata).
 
-You need to install debian specific tools and MaNGOS dependencies (can be found in control file).
+You need to install debian specific tools (dpkg-dev) and MaNGOS dependencies (can be found in control file).
 
 You can customize package version (with MaNGOS revision and Debian/Ubuntu codename) in changelog file with sed.
 
