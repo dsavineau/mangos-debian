@@ -40,6 +40,7 @@ mangos-debian has been tested on GNU/Linux Debian/Ubuntu distributions :
 * Ubuntu Quantal (12.10)
 * Ubuntu Raring  (13.04)
 * Ubuntu Saucy   (13.10)
+* Ubuntu Trusty  (14.04)
 
 ## Repository
 
