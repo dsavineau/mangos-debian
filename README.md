@@ -42,17 +42,6 @@ mangos-debian has been tested on GNU/Linux Debian/Ubuntu distributions :
 * Ubuntu Saucy   (13.10)
 * Ubuntu Trusty  (14.04)
 
-## Repository
-
-I have created a repository for Debian/Ubuntu distributions (see above) on i386/amd64 architectures.
-
-    wget http://198.154.188.218/debian/mangos.gpg.key -O- | apt-key add -
-    echo "deb http://198.154.188.218/debian/ <codename> main" > /etc/apt/sources.list.d/mangos.list
-    apt-get update
-    apt-get install mangos-<version>
-
-Replace <codename> by your codename distribution and version by MaNGOS version (classic, tbc, wotlk or cata).
-
 ## License
 
   This program is free software; you can redistribute it and/or modify
